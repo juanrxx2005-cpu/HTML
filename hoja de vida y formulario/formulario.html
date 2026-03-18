@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Inscripción</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+<h1>Formulario de Inscripción</h1>
+
+<form action="#" method="post">
+
+    
+    <label>Tipo de Documento:</label>
+    <select name="tipo_documento" required>
+        <option value="">Seleccione</option>
+        <option value="cc">Cédula de Ciudadanía</option>
+        <option value="ti">Tarjeta de Identidad</option>
+        <option value="ce">Cédula de Extranjería</option>
+    </select>
+    <br><br>
+
+  
+    <label>Número de Documento:</label>
+    <input type="text" name="documento" pattern="[0-9]{6,12}" required>
+    <br><br>
+
+  
+    <label>Nombres:</label>
+    <input type="text" name="nombres"
+           minlength="3"
+           maxlength="64"
+           pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}"
+           required>
+    <br><br>
+
+   
+    <label>Apellidos:</label>
+    <input type="text" name="apellidos"
+           minlength="3"
+           maxlength="64"
+           pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}"
+           required>
+    <br><br>
+
+   
+    <label>Dirección:</label>
+    <input type="text" name="direccion" required>
+    <br><br>
+
+   
+    <label>Teléfono Fijo:</label>
+    <input type="tel" name="telefono_fijo"
+           pattern="[0-9]{7}"
+           required>
+    <br><br>
+
+    <label>Teléfono Celular:</label>
+    <input type="tel" name="telefono_celular"
+           pattern="[0-9]{10}"
+           required>
+    <br><br>
+
+ 
+    <label>Correo Electrónico:</label>
+    <input type="email" name="correo"
+           pattern="[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+           required>
+    <br><br>
+
+
+    <label>Usuario:</label>
+    <input type="text" name="usuario"
+           pattern="[A-Za-z]{3,14}[0-9]{0,2}"
+           minlength="3"
+           maxlength="16"
+           required>
+    <br><br>
+
+    
+    <label>Password:</label>
+    <input type="password" name="password"
+           pattern="^(?=.*[A-Z])(?=(.*[a-z]){2,})(?=(.*[0-9]){5,})[A-Za-z0-9!?+\-/&$]{16}$"
+           required>
+    <br><br>
+
+
+    <label>Fecha de Inscripción:</label>
+    <input type="date" name="fecha"
+           min="2026-02-15"
+           max="2026-03-06"
+           required>
+    <br><br>
+
+    
+    <label>Hobbies:</label><br>
+    <input type="checkbox" name="hobby" value="deporte"> Deporte<br>
+    <input type="checkbox" name="hobby" value="musica"> Música<br>
+    <input type="checkbox" name="hobby" value="lectura"> Lectura<br>
+    <input type="checkbox" name="hobby" value="viajar"> Viajar<br>
+    <br>
+
+    
+    <label>Comentarios:</label><br>
+    <textarea name="comentarios" rows="4" cols="40"></textarea>
+    <br><br>
+
+    
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpiar">
+
+</form>
+
+</body>
+</html>
